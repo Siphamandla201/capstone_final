@@ -16,7 +16,7 @@ class Users {
         password: password,
       };
   
-      database.query(`INSERT INTO Users SET ?`, [User], (err) => {
+      database.query(`INSERT INTO Users SET ?`, [input], (err) => {
         if (err) {
           res.status(400).json({ err });
         } else {
