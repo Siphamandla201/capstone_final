@@ -36,6 +36,7 @@
 
 <script>
 import NavbarComp from "@/components/NavbarComp.vue";
+import router from "@/router"; 
 
 export default {
   components: {
@@ -59,7 +60,7 @@ export default {
   },
   methods: {
     login() {
-      this.$store.dispatch("login")
+      this.$store.dispatch("login", this.$router.push('/Products'))
       console.log(this.payload);
     },
   },

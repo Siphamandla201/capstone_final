@@ -57,18 +57,6 @@
     <!-- /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| BANNERS / PROMOTIONS |||||||||||||||||||||||||||||||||||||||||| */ -->
 
     <section>
-      <div class="banner-halves">
-        <div class="banner-men">
-          <routerLink to="/Products">
-            <img src="https://i.postimg.cc/qqrpggtG/Black-Simple-Minimalist-Fashion-Style-Instagram-Post.png" alt="" />
-          </routerLink>
-        </div>
-        <div class="banner-women">
-          <router-link to="/Products">
-            <img src="https://i.postimg.cc/wMTCRNVg/Purple-Red-and-Blue-Modern-Model-Influencer-Media-Kit.png" alt="" />
-          </router-link>
-        </div>
-      </div>
       <div class="banner-full">
         <img
           class="img"
@@ -78,7 +66,7 @@
         <div class="banner-description">
           <h3>Collections and Styles</h3>
           <p>Find your true style with our extensive range of collections.</p>
-          <router-link to="Products">SHOP NOW</router-link>
+          <router-link to="Products" style="color: antiquewhite;">SHOP NOW</router-link>
         </div>
       </div>
     </section>
@@ -226,42 +214,6 @@ html {
   transition: background-color 0.2s ease;
 }
 
-.banner-halves {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 400px;
-  margin: 20px;
-  text-align: center;
-  color: rgb(255, 255, 255);
-}
-
-.banner-halves {
-  height: 45%;
-}
-
-.banner-halves :hover {
-  animation: grow 0.8s forwards;
-}
-
-.banner-men a,
-.banner-women a {
-  color: rgb(255, 255, 255);
-}
-
-.banner-men {
-  filter: grayscale(100%);
-  width: 40%;
-  height: 100%;
-}
-
-.banner-women {
-  filter: grayscale(100%);
-
-  width: 48%;
-  height: 100%;
-}
-
 @keyframes grow {
   0% {
     scale: 0.8;
@@ -272,4 +224,56 @@ html {
     margin-bottom: 10px;
   }
 }
+
+@media screen and (max-width: 1250px) {
+
+  .product-holder {
+
+  }
+
+  .arrow {
+  display: none;
+}
+}
+
+@media screen and (max-width: 800px) {
+  .video-container {
+    height: 80vh;
+  }
+
+  .Video {
+    object-fit: cover;
+  }
+
+  .navbar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .product-holder {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+
+
+  .banner-description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .banner-description p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+}
+
 </style>

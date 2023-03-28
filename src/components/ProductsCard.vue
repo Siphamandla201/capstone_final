@@ -121,4 +121,57 @@ i {
   color: rgb(140, 149, 245);
   font-size: 20px;
 }
+
+@media screen and (max-width: 1250px) {
+
+.products-holder {
+  padding: 10px;
+  gap: 40px;
+}
+
+.products-card {
+  height: 300px;
+  width: 200px;
+
+}
+
+img {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  transition: all 1s;
+  padding-left: 5px;
+}
+
+.product-info {
+  margin-top: 2px;
+  margin-left: 0px;
+  border-top: 1px solid rgb(5, 5, 5);
+  text-align: justify;
+}
+
+h3 {
+  margin: 5px;
+  margin-top: 5px;
+  opacity: 0.8;
+  font-size: small;
+}
+
+h4 {
+  margin: 0px;
+  font-size: small;
+}
+
+p {
+  font-size: small;
+}
+
+
+
+
+
+}
+
 </style>

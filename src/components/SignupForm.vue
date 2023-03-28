@@ -76,7 +76,8 @@ export default {
   // }
     const store = useStore();
     const register = () => {
-      store.dispatch("register", payload);
+      console.log(payload);
+      // store.dispatch("register", payload);
     };
     const msg = computed(() => store.state.msg);
     return {

@@ -2,7 +2,7 @@ import { createStore } from "vuex";
 import axios from "axios";
 const grey = "https://grey-foundation.onrender.com/";
 import { useCookies } from "vue3-cookies";
-import router from "@/router";
+// import router from "@/router";
 const { cookies } = useCookies();
 
 export default createStore({
@@ -61,7 +61,6 @@ export default createStore({
           localStorage.setItem("user", jwToken);
           localStorage.setItem("user", JSON.stringify(result));
           context.commit("setMessage", msg);
-          router.push("/");
         } else {
           context.commit("setMessage", err);
         }

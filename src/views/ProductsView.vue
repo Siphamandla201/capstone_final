@@ -85,17 +85,23 @@ export default {
   },
   data() {
     return {
-      Category: ''
+      Category: '',
+      loggedInUser: false,
+      
     }
   },
   setup() {
     const store = useStore();
+    if (loggedInUser = true) {
     store.dispatch("getProducts");
     let products = computed(() => store.state.products);
 
     return {
       products,
     };
+    } else{
+      this.$route.push('/SignIn')
+    }
   },
   methods: {
     filter() {
@@ -192,7 +198,7 @@ select {
 }
 
 .products-card {
-  height: 400px;
+  height: 350px;
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -202,13 +208,13 @@ select {
 
 .product-img {
   overflow: hidden;
-  height: 400px;
+  height: 350px;
   width: 250px;
   padding: 10px;
 }
 img {
-  width: 80%;
-  height: 100%;
+  width: 85%;
+  height: 90%;
   display: flex;
   /* align-items: center; */
   justify-content: center;
