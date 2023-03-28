@@ -4,13 +4,15 @@ const router = express.Router();
 
 const { Users, Products, Orders } = require("../model/dbmodels");
 
-// |||||||||||||||||||||||||||||| -USERS ROUTER- |||||||||||||||||||||||||||||||||| \\
-
-const user = new Users();
+const path = require("path");
 
 router.get("/", (req, res) => {
   res.status(200).sendFile(path.join(__dirname, "../view/index.html"));
 });
+
+// |||||||||||||||||||||||||||||| -USERS ROUTER- |||||||||||||||||||||||||||||||||| \\
+
+const user = new Users();
 
 router.post("/register", bodyParser.json(), (req, res) => {
   user.createUser(req, res);
@@ -58,7 +60,7 @@ router.delete("/products/:ProductId", (req, res) => {
   product.deleteProduct(req, res);
 });
 
-router.put("/products/:productId", bodyParser.json(), (req, res) => {
+router.put("/products/:ProductId", bodyParser.json(), (req, res) => {
   product.updateProduct(req, res);
 });
 

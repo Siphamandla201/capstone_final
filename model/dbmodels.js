@@ -142,26 +142,18 @@ class Products {
   updateProduct(req, res) {
     let reqProduct = req.params.ProductId;
     database.query(
-      `Update Products SET ProductId = ?, ProductName = ?,ProductImage = ?, Price = ?, Size = ?, Quantity = ? 
-        WHERE ProductId = ?`,
-      [
-        req.body.ProductId,
-        req.body.ProductName,
-        req.body.ProductImage,
-        req.body.Price,
-        req.body.Size,
-        req.body.Quantity,
-        reqProduct,
-      ],
+      `UPDATE Products SET ProductId = ?, ProductName = ?, ProductImage = ?, Price = ?, Size = ?, Quantity = ?, Designer = ? 
+       WHERE ProductId = ?`,
+      [reqProduct, req.body.ProductName, req.body.ProductImage, req.body.Price, req.body.Size, req.body.Quantity, req.body.Designer, reqProduct],
       (err, result) => {
         if (err) throw err;
         else {
           res.status(200).json({ msg: "Product updated successfully" });
-          // res.json({result});
         }
       }
     );
   }
+  
 
   deleteProduct(req, res) {
     let reqProduct = req.params.ProductId;

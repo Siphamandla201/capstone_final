@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <title>Home</title>
+    <style>
+      h2 {
+        font-size: large;
+        margin-left: 20px;
+      }
+    </style>
   </head>
   <body>
     <h2>Router Description</h2>
-    <table class="table table-sm table-dark">
-      <tr>
+    <table class="table table-sm container">
+      <tr class="table-dark" >
         <th>Methods</th>
         <th>Path</th>
         <th>Description</th>
@@ -21,8 +28,8 @@
       </tr>
     </table>
     <h2>USERS</h2>
-    <table class="table table-sm table-dark">
-      <tr>
+    <table class="table table-sm container">
+      <tr class=" table-dark">
         <th>Methods</th>
         <th>Path</th>
         <th>Description</th>
@@ -31,7 +38,7 @@
         <td>GET</td>
         <td>
           ('/users') <br /><br />
-          ('/user/:id)
+          ('/users/:UsersId)
         </td>
         <td>
           Getting all users <br /><br />
@@ -40,23 +47,23 @@
       </tr>
       <tr>
         <td>POST</td>
-        <td>('/user')</td>
+        <td>('/register')</td>
         <td>Creating a new user</td>
       </tr>
       <tr>
         <td>PUT</td>
-        <td>('/user/:id')</td>
+        <td>('/users/:UsersId')</td>
         <td>Updating an existing user details using id</td>
       </tr>
       <tr>
         <td>DELETE</td>
-        <td>('/user/:id')</td>
+        <td>('/users/:UsersId')</td>
         <td>Deleting an existing user using an id</td>
       </tr>
     </table>
     <h2>PRODUCTS</h2>
-    <table class="table table-sm table-dark">
-      <tr>
+    <table class="table table-sm container">
+      <tr class=" table-dark">
         <th>Methods</th>
         <th>Path</th>
         <th>Description</th>
@@ -65,7 +72,7 @@
         <td>GET</td>
         <td>
           ('/products') <br /><br />
-          ('/product/:id
+          ('/products/:ProductId)
         </td>
         <td>
           Getting all products <br /><br />
@@ -74,25 +81,21 @@
       </tr>
       <tr>
         <td>POST</td>
-        <td>('/product')</td>
+        <td>('/products')</td>
         <td>Adding a new product</td>
       </tr>
       <tr>
         <td>PUT</td>
-        <td>('/product/:id')</td>
+        <td>('/products/:ProductId')</td>
         <td>Updating an existing product details using id</td>
       </tr>
       <tr>
         <td>DELETE</td>
-        <td>('/product/:id')</td>
+        <td>('/products/:ProductId')</td>
         <td>Deleting an existing product using an id</td>
       </tr>
     </table>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
   </body>
 </html>
 >
